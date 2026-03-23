@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ================= HEADER / NAVBAR ================= */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    z-index: 999;
+    padding: 20px 80px;
+    position: fixed;
+    width: 100%;
+}
+
+.logo{
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+    color: #b74b4b;
+    text-transform: uppercase;
+}
+
+nav{
+    display: flex;
+    gap:8em;
+}
+
+nav a{
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 2px solid #b74b4b;
+}
+
+section.home{
+    width: 100%;
+}
+
+/* ================= HOME SECTION ================= */
+
+section.home{
+    min-height: 100vh;
+    padding: 14rem 9% 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+}
+
+.home-content h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.typing-text{
+    font-size: 3.6rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.typing-text span{
+    position: relative;
+    color: #b74b4b;
+}
+
+.typing-text span::before{
+    content: "Web Developer";
+    animation: words 7s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    position: absolute;
+    right: -8px;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: black;
+    border-left: 3px solid black;
+    animation: cursor 0.6s infinite;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+/* ================= IMAGE ================= */
+
+.home-image img{
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #b74b4b;
+    transition: 0.3s ease;
+}
+
+.home-image img:hover{
+    transform: scale(1.05);
+}
+
+/* ================= SOCIAL ICONS ================= */
+
+.social-icons{
+    margin: 3rem 0;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1.5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #b74b4b;
+    border: 0.2rem solid #b74b4b;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover{
+    background-color: #b74b4b;
+    color: black;
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+/* ================= BUTTON ================= */
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    border-radius: 4rem;
+    border: 2px solid #b74b4b;
+    color: #b74b4b;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    transition: 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #b74b4b;
+    color: black;
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #b74b4b;
+    }
+}
+
+@keyframes words{
+    0%,50%{content:"Web Developer";}
+    51%,100%{content:"Logo Designer";}
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 995px){
+    section.home{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-image img{
+        width: 70vw;
+    }
+
+    nav{
+        display: none;
+    }
+}
+
+
+
+.photo1{
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 30pxkkkkkkkkkkkkkkkkkkkkkkkk ;
+    transition: 0.3s ease;
+    height: auto;
+    object-fit: cover;
+
+}
+.photo1:hover{
+        transform: scale(1.05);
+}
+.about{
+  max-width: 3000px;  
+  margin-left: 80px;  
+  margin-right: auto;
+  text-align: left;
+  padding: 15px;
+  font-size: 20px;
+}
+.about-content{
+    display: flex;
+    align-items: flex-start;
+    gap: 300px;
+    max-width: 1700px;
+    line-height: 40px;
+}
+.about h2{
+    font-size: 30px;
+    color: white;
+}
+.about h2:hover{
+    color:white
+}
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+.title{
+    display: flex;
+    justify-content: center;
+    font-size: 4em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+
+.title strong{
+    color: #b74b4b;
+}
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+  margin: 50px;
+}
+.card {
+  background-color: black;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 15px;
+  padding: 25px;
+}
+.card:hover{
+     transform: scale(1.05) ;
+     box-shadow: 0 5px 25px #b74b4b;
+     border: 2px solid #b74b4b;
+
+}
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+.bio{
+    font-size: 20px;
+    text-align: center;
+    margin: 30px;
+}
+
+.title-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.title-line h2 {
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.title-line span {
+  flex: 1;
+  height: 2px;
+  background-color: #b74b4b; /* لون الخط */
+  max-width: 80px; /* طول كل خط */
+}
+.icons{
+    color: white;
+    font-size: 8em;
+    text-align: center;
+}
+.info h3{
+    color: #b74b4b;
+    font-weight: 700;
+    margin: 10px;
+}
+.info{
+    text-align: center;
+    font-size: 1.7em;
+}
+
+/* ================= SKILLS SECTION ================= */
+
+.skills-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 150px;
+  padding: 200px 0;
+}
+
+/* ================= CONTAINER ================= */
+
+.container1 {
+  width: 600px;
+}
+
+/* ================= TITLES ================= */
+
+.heading1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.heading1::after {
+  content: "";
+  width: 120px;
+  height: 3px;
+  background: #fff;
+  display: block;
+  margin: 10px auto 0;
+}
+
+/* ================= TECHNICAL SKILLS ================= */
+
+.technical-bars .bar {
+  margin-bottom: 30px;
+}
+
+.technical-bars .info span {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.progress-line {
+  width: 100%;
+  height: 6px;
+  background: #222;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-line span {
+  height: 100%;
+  background: #b74b4b;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  animation: grow 1.5s ease forwards;
+}
+
+/* ================= BAR PERCENTAGES ================= */
+
+.progress-line.html span { width: 90%; }
+.progress-line.css span { width: 60%; }
+.progress-line.javascript span { width: 85%; }
+.progress-line.python span { width: 50%; }
+.progress-line.react span { width: 75%; }
+
+/* ================= BAR PERCENT TEXT ================= */
+
+.progress-line span::after {
+  content: attr(data-percent);
+  position: absolute;
+  right: -35px;
+  top: -28px;
+  font-size: 13px;
+  color: #fff;
+}
+
+/* ================= PROFESSIONAL SKILLS ================= */
+
+.radial-bars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+/* ================= RADIAL CIRCLE ================= */
+
+.radial-bar {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.radial-bar svg {
+  width: 200px;
+  height: 200px;
+  transform: rotate(-90deg);
+}
+
+.radial-bar circle {
+  fill: none;
+  stroke-width: 12;
+  stroke-linecap: round;
+}
+
+/* background circle */
+.radial-bar .bg {
+  stroke: #222;
+}
+
+/* progress circle */
+.radial-bar .path {
+  stroke: #b74b4b;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  animation: draw 1.5s ease forwards;
+}
+
+/* ================= RADIAL PERCENTAGES ================= */
+
+.path-1 { stroke-dashoffset: calc(502 - (502 * 90) / 100); }
+.path-2 { stroke-dashoffset: calc(502 - (502 * 60) / 100); }
+.path-3 { stroke-dashoffset: calc(502 - (502 * 100) / 100); }
+.path-4 { stroke-dashoffset: calc(502 - (502 * 40) / 100); }
+
+/* ================= RADIAL TEXT ================= */
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes grow {
+  from { width: 0; }
+}
+
+@keyframes draw {
+  from { stroke-dashoffset: 502; }
+  to { stroke-dashoffset: inherit; }
+}
